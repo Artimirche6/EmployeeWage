@@ -12,10 +12,10 @@ totalWorkHr=0
 
 function getWorkHr()
 {
-	local empCheck=$1
-	local empHr=0
+        local empCheck=$1
+        local empHr=0
 
-	case $empCheck in
+        case $empCheck in
                 $IS_PRESENT_FULL_TIME)
                         empHr=8
                 ;;
@@ -27,20 +27,19 @@ function getWorkHr()
                 ;;
 
         esac
-	echo $empHr
+        echo $empHr
 }
 
 while [ $day -lt $MAX_WORKING_DAYS -a $totalWorkHr -lt $MAX_WORK_HR ]
 do
-	#variable
-	empCheck=$((RANDOM%3))
+        #variable
+        empCheck=$((RANDOM%3))
 
-	empHr=$( getWorkHr $empCheck )
+        empHr=$( getWorkHr $empCheck )
 
-	((day++))
-	totalWorkHr=$(( totalWorkHr + empHr ))
-	salary=$(( empHr * EMP_RATE_PER_HR ))
+        ((day++))
+        totalWorkHr=$(( totalWorkHr + empHr ))
+        salary=$(( empHr * EMP_RATE_PER_HR ))
 
 done
 
-totalSalary=$(( totalWorkHr * EMP_RATE_PER_HR ))

@@ -1,0 +1,61 @@
+  219  mkdir gitPractice
+  221  cd gitPractice/
+  229  git init
+  231  git status
+  232  git add calculator.sh
+  233  git status
+  235  git config --global user.email "artimirche6@gmail.com
+  237  git config --list
+  238  git config --global user.email "artimirche6@gmail.com"
+  239  git config --list
+  240  git config --global user.name "Artimirche6"
+  241  git config --list
+  242  git status
+  243  git commit -m "[arti] added : calculation file is added "
+  244  git status
+  245  git remote add origin git@github.com:Artimirche6/Calculator.git
+  246  git remote -v
+  247  git push -u origin master
+  248  git push origin master
+  251  git status 
+  252  git this
+  253  git diff
+  254  git add .
+  255  git status 
+  256  git commit -m "[arti] feature : Addition of two numbers "
+  257  git status 
+  258  git push origin master
+  512  cd gitPractice/
+  514  git clone git@github.com:Artimirche6/EmployeeWage.git
+  517  git remote -v
+  523  git status
+  525  git status
+  526  git add .
+  527  git status
+  528  git config --list
+  529  git commit -m "[arti] Added: Employee Wage Computation File"
+  530  git push origin main
+  531  git branch
+  532  git checkout -b UC-1-EmpAttendance
+  533  git branch
+  537  git status
+  538  git add .
+  539  git status
+  540  git commit -m "[arti] Added: Emplyoee Attendance Check" 
+  541  git push origin UC-1-EmpAttendance
+  543  git checkout main
+  545  git merge UC-1-EmpAttendance 
+  547  git push origin main
+  548  git checkout -b UC-2-EmpWageCompute
+  555  git status 
+  556  git add .
+  557  git status
+  558  git commit -m "[arti] Added: Employee Wage Calulated"
+  559  git branch
+  560  git push origin UC-2-EmpWageCompute 
+  561  git checkout main
+  562  git merge UC-2-EmpWageCompute 
+  563  git push origin main 
+  564  git branch
+  565  history | grep git
+  566  history | grep git > loggit.txt

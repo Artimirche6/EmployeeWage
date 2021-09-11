@@ -10,7 +10,8 @@ day=0
 
 totalWorkHr=0
 
-declare -a dailyWage
+declare -A dailyWage
+
 function getWorkHr()
 {
 	local empCheck=$1
@@ -39,12 +40,12 @@ do
 
 	empHr=$( getWorkHr $empCheck )
 
-	#((day++))
+	((day++))
 	totalWorkHr=$(( totalWorkHr + empHr ))
-	dailyWage[((day++))]=$(( empHr * EMP_RATE_PER_HR ))
+	dailyWage[((day_$day))]=$(( empHr * EMP_RATE_PER_HR ))
 
 done
 
 totalSalary=$(( totalWorkHr * EMP_RATE_PER_HR ))
-
 echo dailyWage:${dailyWage[*]}
+echo keys:${!dailyWage[*]}

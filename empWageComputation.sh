@@ -5,10 +5,12 @@ IS_PRESENT_FULL_TIME=1
 IS_PRESENT_PART_TIME=2
 EMP_RATE_PER_HR=20
 MAX_WORKING_DAYS=20
+MAX_WORK_HR=100
+day=1
 
 totalWorkHr=0
 
-for ((day=1;day<=$MAX_WORKING_DAYS;day++))
+while [ $day -lt $MAX_WORKING_DAYS -a $totalWorkHr -lt $MAX_WORK_HR ]
 do
 	#variable
 	empCheck=$((RANDOM%3))
@@ -26,6 +28,7 @@ do
 
 	esac
 	
+	((day++))
 	totalWorkHr=$(( totalWorkHr + empHr ))
 	salary=$(( empHr * EMP_RATE_PER_HR ))
 
